@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 112">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff8c6a;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="cancel-music" transform="translate(0 0)">
+    <path id="Path_4061" data-name="Path 4061" class="cls-1" d="M69.311,56l39.932-39.932A9.412,9.412,0,0,0,95.933,2.757L56,42.69,16.067,2.756A9.412,9.412,0,0,0,2.757,16.067L42.689,56,2.757,95.932a9.412,9.412,0,0,0,13.311,13.311L56,69.31l39.933,39.933a9.412,9.412,0,0,0,13.311-13.311Z" transform="translate(0)"/>
+  </g>
+</svg>

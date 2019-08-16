@@ -1,0 +1,177 @@
+.body{
+	position: absolute;
+	top: -20px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: auto;
+	height: auto;
+	background-image: url("../assets/img/bg.png");
+	background-size: cover;
+	/* -webkit-filter: blur(1px); */
+	z-index: 0;
+}
+.rapport{
+	position: absolute;
+	top: -20px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: auto;
+	height: auto;
+	background-image: url("../assets/img/rapport.png");
+	z-index: 1;
+	opacity: 0.9;
+}
+
+@media(max-width:576px){
+  .login {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 4%!important;
+    height: auto;
+    width: 400px;
+    max-width: calc(100% - 30px);
+    padding: 10px;
+    z-index: 2;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+  }
+  .modal-password{
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 4%!important;
+    height: 40% !important;
+    width: 400px;
+    max-width: calc(100% - 30px);
+    padding: 10px;
+    z-index: 2;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+  }
+}
+
+
+.login{
+	position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 165px);
+    height: auto;
+    width: 400px;
+    max-width: calc(100% - 30px);
+    padding: 10px;
+    z-index: 2;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+}
+.login input[type=text]{
+	width: 250px;
+    height: 30px;
+    background: white;
+    border: 1px solid #DBDADA;
+    border-radius: 15px;
+    color: #484A4D;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 400;
+    padding: 4px;
+}
+.login input[type=password]{
+	width: 250px;
+    height: 30px;
+    background: white;
+    border: 1px solid #DBDADA; 
+    border-radius: 15px;
+    color: #484A4D;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 400;
+    padding: 4px;
+    margin-top: 5%;
+}
+.login input[type=button]{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.0rem;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid #0276ff;
+}
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid #0276ff;
+}
+.login input[type=button]:focus{
+	outline: none;
+}
+::-webkit-input-placeholder{
+   color: #DBDADA;
+}
+::-moz-input-placeholder{
+   color: #DBDADA;
+}
+
+.logo-login{
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 165px);
+  width: 400px;
+  max-width: calc(100% - 60px);
+  padding: 10px;
+  z-index: 2;
+}
+
+/*//////////////////////Modal//////////////////////*/
+.modal-contenido {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.modal-password{
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 165px);
+    height: 35%;
+    width: 400px;
+    max-width: calc(100% - 30px);
+    padding: 10px;
+    z-index: 2;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+}
+.close {
+    color: #013E98;
+    float: right;
+    margin-top: -5px;
+    margin-right: 0px;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 1;
+}
+.close:hover,
+.close:focus {
+    color: #013E98;
+    text-decoration: none;
+    cursor: pointer;
+}

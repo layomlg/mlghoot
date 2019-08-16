@@ -1,0 +1,71 @@
+.triggerContainer {
+  width: 100%;
+  /* margin: 40px auto; */
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5rem;
+}
+
+.triggerKlickNavTrigger__Element {
+  max-width: 200px;
+  width: 180px;
+  padding: 10px 10px 8px;
+  border: none;
+  font-size: 14px;
+  color: #000000;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #F5F5F5;
+  display: inline-block;
+  cursor: pointer;
+  border-bottom: 0;
+  position: relative;
+  border-radius: 5px;
+}
+
+.triggerKlickNavTrigger__Element.active {
+  background-color: #ffffff;
+  /*  min-width: 135px;*/
+  display: inline-block;
+  padding: 10px 10px 8px;
+  /* border: 1px solid #c0c0c0; */
+  border-bottom-color: #ffffff !important;
+  width: auto !inline-block;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.navKlickContentContainer {
+  display: block;
+  padding: 25px;
+  margin-bottom: 25px;
+  /* border: 1px solid #cccccc; */
+  border-radius: 10px;
+}
+
+.navKlickContent,
+.navKlickContent-1 {
+  display: none;
+}
+
+.navKlickContent-1.active,
+.navKlickContent.active {
+  display: flex;
+}
+
+.triggerKlickNavTrigger__Element.active i {
+  width: 100%;
+  height: 1px !important;
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: #fff;
+}
+
+.w3-blue,
+.w3-hover-blue:hover {
+  color: #fff !important;
+  background-color: #FF8C6A !important;
+}
