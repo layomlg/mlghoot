@@ -58,11 +58,14 @@ font-weight: bold;
 .elemento.w-100{
   padding: 0;
   max-width: inherit;
+  margin-bottom: 40px;
 }
 .sectionTitle{
   position: absolute;
   top: 50%;
   left: 0px;
+  -webkit-transform: translate(0px, -50%);
+  -ms-transform: translate(0px, -50%);
   transform: translate(0px, -50%);
   text-align: center;
   width: 100%;
