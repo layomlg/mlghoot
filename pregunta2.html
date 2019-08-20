@@ -79,48 +79,23 @@
     <!--InicioContenedor-->
     <div class="contenedor reforzamiento">
       <div class="elemento w-100 clearfix">
-        <img src="./assets/img/bg-reforzamiento.png">
-        <p class="sectionTitle">Elije un tema</p>
+        <div class="titulo-juego"><p>¿En el Pilar frío cúal es la ponderación obtenida?</p></div>
       </div>
       <div class="elemento clearfix">
-        <div class="row actividad-cards">
-          <div class="col-md-4">
-            <div class="actividad-card">
-              <div class="bg-actividad"></div>
-              <p>GAMA GAMA GAMA GAMA GAMA GAMA GAMA</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="actividad-card">
-              <div class="bg-actividad"></div>
-              <p>GAMA</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="actividad-card">
-              <div class="bg-actividad"></div>
-              <p>GAMA</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="actividad-card">
-              <div class="bg-actividad"></div>
-              <p>GAMA</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="actividad-card">
-              <div class="bg-actividad"></div>
-              <p>GAMA</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="actividad-card">
-              <div class="bg-actividad"></div>
-              <p>GAMA</p>
-            </div>
-          </div>
+        <div class="lista-espera">
+          <div class="jugadores"><p><span class="respuesta">5</span></p></div>
+          <div class="esperando"><img src="./assets/img/actividades/pilar/pilar1.png"></div>
+          <button class="iniciar">Saltar</button>
         </div>
+      </div>
+      <div class="elemento clearfix">
+        <div class="respuestas">
+          <button>A) 10</button>
+          <button>B) 20</button>
+          <button>C) 30</button>
+          <button>D) 40</button>
+        </div>
+
       </div>
     </div>
     <!--FinContenedor-->
@@ -158,6 +133,14 @@
       $(window).resize(function() {
         $(".bg-img").height($(".bg-img").width() * 578 / 1280);
       }).resize();
+
+      $(window).resize(function() {
+        var val = $(".progress").attr("data-progress") + "%";
+        $(".progress > div").css("width",val);
+        console.log(val);
+      }).resize();
+
+
     </script>
 
   </body>

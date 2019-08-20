@@ -79,47 +79,14 @@
     <!--InicioContenedor-->
     <div class="contenedor reforzamiento">
       <div class="elemento w-100 clearfix">
-        <img src="./assets/img/bg-reforzamiento.png">
-        <p class="sectionTitle">Elije un tema</p>
+        <div class="titulo-juego"><p>Pregunta 1 de 10</p></div>
+        <div class="progress" data-progress="10"><div></div></div>
       </div>
       <div class="elemento clearfix">
-        <div class="row actividad-cards">
-          <div class="col-md-4">
-            <div class="actividad-card">
-              <div class="bg-actividad"></div>
-              <p>GAMA GAMA GAMA GAMA GAMA GAMA GAMA</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="actividad-card">
-              <div class="bg-actividad"></div>
-              <p>GAMA</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="actividad-card">
-              <div class="bg-actividad"></div>
-              <p>GAMA</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="actividad-card">
-              <div class="bg-actividad"></div>
-              <p>GAMA</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="actividad-card">
-              <div class="bg-actividad"></div>
-              <p>GAMA</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="actividad-card">
-              <div class="bg-actividad"></div>
-              <p>GAMA</p>
-            </div>
-          </div>
+        <div class="lista-espera">
+          <!--<div class="jugadores"><img src="./assets/img/logo.png"></div>-->
+          <div class="esperando">¿En el Pilar frío cúal es la ponderación obtenida?</div>
+          <button class="iniciar">Siguiente</button>
         </div>
       </div>
     </div>
@@ -158,6 +125,14 @@
       $(window).resize(function() {
         $(".bg-img").height($(".bg-img").width() * 578 / 1280);
       }).resize();
+      
+      $(window).resize(function() {
+        var val = $(".progress").attr("data-progress") + "%";
+        $(".progress > div").css("width",val);
+        console.log(val);
+      }).resize();
+      
+      
     </script>
 
   </body>
