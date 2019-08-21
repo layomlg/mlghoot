@@ -498,3 +498,126 @@ div.elemento.resp{
 .graficas-respuesta > div:nth-child(4) >div{
   background-color: #FF756A;
 }
+
+
+
+/********************************************************/
+
+div.elemento.img.podium {
+  height: calc(100% - 232px);
+}
+
+
+
+.graficas-posicion > div span{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px 0px 8px;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%,0px);
+
+  -webkit-transition: bottom 1s;
+  transition: bottom 1s;
+}
+
+.graficas-posicion > div div span{
+  font-size: 16px;
+  color: #ffffff;
+  top: 10%;
+}
+.graficas-posicion > div span.winner{
+  font-size: 12px;
+  width: 100%;
+  border: 1px solid #fff;
+  margin-bottom: 10px;
+  background-color: #D6D6D6;
+}
+
+.elemento.img .imagen-pregunta > div.graficas-posicion {
+  position: absolute;
+  height: 90%;
+  width: 50%;
+  margin: 0px 25%;
+}
+.graficas-posicion > div{
+  width: 33%;
+  height:100%;
+  float: left;
+  position: relative;
+}
+.graficas-posicion > div >div{
+  width: 100%;
+  display: block;
+  height: 0%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border: 3px solid #fff;
+
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+.graficas-posicion > div:nth-child(1) >div{
+  background-color: #FDA88F;
+}
+.graficas-posicion > div:nth-child(2) >div{
+  background-color: #FB8A69;
+}
+.graficas-posicion > div:nth-child(3) >div{
+  background-color: #FCD3C6;
+}
+
+
+.graficas-posicion{
+  width: 100%;
+
+}
+.graficas-posicion > table{
+  border-spacing: 10px;
+}
+.graficas-posicion > table,
+.graficas-posicion > table thead,
+.graficas-posicion > table tbody,
+.graficas-posicion > table tr{
+  width: 100%;
+}
+.graficas-posicion > table td{
+  background-color: #D6D6D6;
+  color: #000000;
+  padding: 5px 8px;
+  border: 0px none;
+}
+.graficas-posicion > table td:nth-child(1){
+  border-radius: 20px 0px 0px 20px;
+}
+.graficas-posicion > table td:nth-child(2){
+  border-radius: 0px 20px 20px 0px;  
+}
+.graficas-posicion .resultados-tabla{
+  width: 100%;
+}
+.graficas-posicion .resultados-tabla p{
+  width: 100%;
+  background-color: #D6D6D6;
+  color: #000000;
+  padding: 5px 8px;
+  border-radius: 22px;
+  text-align: left;
+}
+.graficas-posicion .resultados-tabla p>span{
+  color: #000000;
+  padding: 5px 8px;
+  text-align: right;
+  position: relative;
+  font-size: 14px;
+  font-weight: normal;
+  float: right;
+  left: auto;
+  padding: 0px 8px;
+}
+.new-actividad {
+  margin-bottom: 60px;
+}
