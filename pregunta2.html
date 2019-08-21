@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/quiz.css">
   </head>
 
-  <body class="body page-index clearfix">
+  <body class="body page-index actividad clearfix">
 
 
     <nav class="navbar navbar-expand navbar-dark fixed-top primera">
@@ -77,51 +77,35 @@
     <a id="buttontop"></a>
 
     <!--InicioContenedor-->
-    <div class="contenedor reforzamiento">
-      <div class="elemento w-100 clearfix">
+    <div class="contenedor reforzamiento actividad">
+      <div class="elemento w-100 preg clearfix">
         <div class="titulo-juego"><p>¿En el Pilar frío cúal es la ponderación obtenida?</p></div>
       </div>
-      <div class="elemento clearfix">
-        <div class="lista-espera">
-          <div class="jugadores"><p><span class="respuesta">5</span></p></div>
-          <div class="esperando"><img src="./assets/img/actividades/pilar/pilar1.png"></div>
+      <div class="elemento img clearfix">
+        <div class="imagen-pregunta">
+          <div class="finish"><p><span class="respuesta">5</span></p></div>
+          <div class="imagen" style="display:none;"></div>
+          <div class="graficas-respuesta">
+            <div data-respuestas="1"><span class="error">0</span><div></div></div>
+            <div data-respuestas="1"><span class="error">0</span><div></div></div>
+            <div data-respuestas="2"><span class="correct">0</span><div></div></div>
+            <div data-respuestas="1"><span class="error">0</span><div></div></div>
+          </div>
           <button class="iniciar">Saltar</button>
+          <a class="finalizar">Finalizar juego</a>
         </div>
       </div>
-      <div class="elemento clearfix">
-        <div class="respuestas">
-          <button>A) 10</button>
-          <button>B) 20</button>
-          <button>C) 30</button>
-          <button>D) 40</button>
+      <div class="elemento w-100 resp clearfix">
+        <div class="respuestas x4">
+          <button class="r-a">A) 10</button>
+          <button class="r-b">B) 20</button>
+          <button class="r-c">C) 30</button>
+          <button class="r-d">D) 40</button>
         </div>
 
       </div>
     </div>
     <!--FinContenedor-->
-
-    <div class="footer">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="img-inline"><img src="./assets/img/logo.png">
-          </div>
-          <p></p>
-        </div>
-        <div class="col-sm-3">
-          <a href="http://www.circulodehonorpepsico.com">www.e-learningarrajaguar.com</a>
-        </div>
-        <div class="col-sm-3">
-          <p>Int. de la República - <a href="tel:018002867183">01 800 000 000</a>
-            CDMX - <a href="tel:12502338">1000 0000</a></p>
-        </div>
-        <div class="col-sm-3">
-          <a href="mail:contacto@circulodehonorpepsico.com">contacto@garrajaguar.com</a>
-        </div>
-        <div class="col-sm-3">
-          <p>®GarraJaguar</p>
-        </div>
-      </div>
-    </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./js/jquery-3.3.1.min.js"></script>
@@ -130,16 +114,23 @@
 
     <!--Funcion para hacer el resize-->
     <script type="text/javascript">
-      $(window).resize(function() {
-        $(".bg-img").height($(".bg-img").width() * 578 / 1280);
-      }).resize();
 
-      $(window).resize(function() {
-        var val = $(".progress").attr("data-progress") + "%";
-        $(".progress > div").css("width",val);
-        console.log(val);
-      }).resize();
-
+      function alturas(){
+        var total = 0;
+        $("div.graficas-respuesta > div").each(function() {
+          total = total + parseInt($(this).attr("data-respuestas"));
+        });
+        $("div.graficas-respuesta > div").each(function() {
+          var val = 0;
+          var value = parseInt($(this).attr("data-respuestas"));
+          val= value/total*100;
+          val = val + "%";
+          $(this).children("span").html(value);
+          $(this).children("span").css("bottom",val);
+          $(this).children("div").css("height",val);
+        });
+      }
+      setInterval(alturas(),1000);
 
     </script>
 
