@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1070" height="582" viewBox="0 0 1070 582">
+  <defs>
+    <clipPath id="clip-medal">
+      <rect width="1070" height="582"/>
+    </clipPath>
+  </defs>
+  <g id="medal" clip-path="url(#clip-medal)">
+    <g id="Grupo_59" data-name="Grupo 59" transform="translate(-13291.734 1254)">
+      <g id="Grupo_58" data-name="Grupo 58" transform="translate(0.496)">
+        <rect id="Rectángulo_87" data-name="Rectángulo 87" width="77" height="769" transform="translate(14345.982 -1346.806) rotate(48)" fill="#97d4f4"/>
+        <rect id="Rectángulo_88" data-name="Rectángulo 88" width="77" height="768" transform="translate(13877.497 -832.244) rotate(132)" fill="#97d4f4"/>
+      </g>
+      <circle id="Elipse_3" data-name="Elipse 3" cx="132.5" cy="132.5" r="132.5" transform="translate(13694 -974)" fill="#ffc24b"/>
+    </g>
+  </g>
+</svg>

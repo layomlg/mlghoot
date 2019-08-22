@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- BOOTSTRAP Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.4.1.css">
+    <!--General CSS-->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/custom-pelayo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/quiz.css">
+  </head>
+
+  <body class="body page-index actividad clearfix">
+
+    <!--InicioContenedor-->
+    <div class="contenedor reforzamiento pregunta">
+      <div class="elemento w-100 preg clearfix">
+        <div class="titulo-juego"><p><img class="logo-head" src="./assets/img/logo2.svg"> Pregunta 1 de 10</p></div>
+        <div class="progress" data-progress="10"><div></div></div>
+      </div>
+      <div class="retro-respuesta succes">
+        <p class="estado">Correcto</p>
+        <div>
+          <img class="succes" src="./assets/img/actividades/succes-b.svg" alt="">
+          <img class="error" src="./assets/img/actividades/error-b.svg" alt="">
+          <div class="esperando">+3498</div>
+        </div>
+        <p class="lugar">Vas en primer lugar</p>
+
+      </div>
+      <div class="elemento img clearfix">
+        <div class="imagen-pregunta">
+          <div class="finish2"><p><span class="respuesta">5</span></p></div>
+          <div class="esperando">¿En el Pilar frío cúal es la ponderación obtenida?</div>
+          <div class="imagen" ></div>
+        </div>
+      </div>
+      <div class="elemento w-100 resp clearfix">
+        <div class="respuestas x4">
+          <button class="r-a">A) 10</button>
+          <button class="r-b">B) 20</button>
+          <button class="r-c">C) 30</button>
+          <button class="r-d">D) 40</button>
+        </div>
+
+      </div>
+    </div>
+    <!--FinContenedor-->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/popper.min.1.14.0.js"></script>
+    <script src="./js/bootstrap.min.4.1.js"></script>
+
+    <!--Funcion para hacer el resize-->
+
+
+    <script type="text/javascript">
+      $(window).resize(function() {
+        var val = $(".progress").attr("data-progress") + "%";
+        $(".progress > div").css("width",val);
+        console.log(val);
+      }).resize();
+
+      function alturas(){
+        var total = 0;
+        $("div.graficas-respuesta > div").each(function() {
+          total = total + parseInt($(this).attr("data-respuestas"));
+        });
+        $("div.graficas-respuesta > div").each(function() {
+          var val = 0;
+          var value = parseInt($(this).attr("data-respuestas"));
+          val= value/total*100;
+          val = val + "%";
+          $(this).children("span").html(value);
+          $(this).children("span").css("bottom",val);
+          $(this).children("div").css("height",val);
+        });
+      }
+      setInterval(alturas(),1000);
+
+    </script>
+
+  </body>
+
+</html>

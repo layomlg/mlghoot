@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- BOOTSTRAP Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.4.1.css">
+    <!--General CSS-->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/custom-pelayo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/quiz.css">
+  </head>
+
+  <body class="body page-index clearfix">
+
+    <!--InicioContenedor-->
+    <div class="contenedor reforzamiento pregunta">
+      <div class="elemento w-100 clearfix">
+        <div class="titulo-juego"><p><img class="logo-head" src="./assets/img/logo2.svg"> Pregunta 1 de 10</p></div>
+        <div class="progress" data-progress="10"><div></div></div>
+      </div>
+      <div class="elemento clearfix">
+        <div class="lista-espera">
+          <p class="numero-pregunta">Pregunta 1</p>
+          <div class="esperando">¿En el Pilar frío cúal es la ponderación obtenida?</div>
+        </div>
+      </div>
+    </div>
+    <!--FinContenedor-->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/popper.min.1.14.0.js"></script>
+    <script src="./js/bootstrap.min.4.1.js"></script>
+
+    <!--Funcion para hacer el resize-->
+    <script type="text/javascript">
+      $(window).resize(function() {
+        $(".bg-img").height($(".bg-img").width() * 578 / 1280);
+      }).resize();
+
+      $(window).resize(function() {
+        var val = $(".progress").attr("data-progress") + "%";
+        $(".progress > div").css("width",val);
+        console.log(val);
+      }).resize();
+
+
+    </script>
+
+  </body>
+
+</html>

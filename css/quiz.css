@@ -621,3 +621,285 @@ div.elemento.img.podium {
 .new-actividad {
   margin-bottom: 60px;
 }
+
+
+.iniciar{
+  font-size: 18px;
+  text-align: center;
+  width: auto;
+
+
+  background-color: #FF8C6A;
+  color: #fff;
+  border-radius: 20px 0px 0px 20px;
+  border-radius: 20px;
+  border: 0px none;
+  font-size: 14px;
+  padding: 5px 40px 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: left;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************/
+
+.contenedor.reforzamiento.alumno{
+  top: 0px;
+  min-height: calc(100vh);
+  margin-top: 0px;
+}
+
+.contenedor.reforzamiento.alumno .elemento.w-100 {
+  margin-bottom: 0px;
+  background-color: #D6D6D6;
+}
+.contenedor.reforzamiento.alumno img{
+  margin: 10vh auto;
+  width: 50%;
+  max-width: 200px;
+}
+.ingreso-codigo{
+  display: block;
+}
+.ingreso-codigo .jugadores {
+  font-size: 18px;
+  text-align: center;
+  width: auto;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+.ingreso-codigo .iniciar {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  padding: 5px 20px;
+}
+.ingreso-codigo .bienvenida{
+  color: #FF8C6A;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+}
+.ingreso-codigo .codigo{
+  display: block;
+  margin: 20px auto 40px;
+  padding: 8px 15px;
+  border: 0px none;
+  background-color: #D6D6D6;
+  color: #000000;
+}
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #333;
+  text-align: center;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #333;
+  text-align: center;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #333;
+  text-align: center;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #333;
+  text-align: center;
+}
+
+
+/********************************************************/
+
+.contenedor.reforzamiento.pregunta{
+  top: 0px;
+  min-height: calc(100vh);
+  margin-top: 0px;
+}
+
+.contenedor.reforzamiento.pregunta .elemento.w-100 {
+  margin-bottom: 0px;
+  background-color: #D6D6D6;
+}
+.contenedor.reforzamiento.pregunta .titulo-juego> p{
+  text-align: right;
+}
+.contenedor.reforzamiento.pregunta img{
+  margin: 0px auto;
+  width: 50px;
+
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+
+.numero-pregunta{
+  width: 100%;
+  position: relative;
+  text-align: center;
+
+  color: #FF8C6A;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10vh auto;
+
+}
+
+
+
+.finish2 p {
+  font-size: 18px;
+  text-align: center;
+  width: auto;
+
+  background-color: #FF8C6A;
+  color: #fff;
+  border-radius: 20px 0px 0px 20px;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  border: 0px none;
+  font-size: 14px;
+  padding: 8px 0px;
+  text-align: center;
+  margin: 0px auto 20px;
+}
+
+.pregunta .esperando{
+  font-size: 18px;
+  text-align: center;
+  width: auto;
+  max-width: 80%;
+  margin: 0px auto 30px;
+
+  border-radius: 50px 0px 50px 50px;
+  background-color: #fff;
+  padding: 30px;
+  font-weight: bold;
+}
+.pregunta .elemento.img .imagen-pregunta > div.imagen {
+  height: 60%;
+  width: 90%;
+}
+
+
+/***************************************/
+
+.retro-respuesta.succes{
+  width: 100%;
+  height:calc(100% - 80px);
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  z-index: 5;
+}
+.retro-respuesta.succes{
+  background-color: #65BE51;
+}
+.retro-respuesta.error{
+  background-color: #F04B4C;
+}
+
+.retro-respuesta > p.estado{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 50px 15px 15px;
+  color: #ffffff;
+}
+.retro-respuesta > p.lugar{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 15px 50px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+img.error,img.succes{
+  display: none;
+}
+.retro-respuesta.succes img.succes{
+  display: block;
+  margin: 10vh auto!important;
+  height: 30vh;
+  max-height: 120px;
+  width: auto;
+  position: relative!important;
+  left: 0px!important;
+  top: 0px!important;
+}
+.retro-respuesta.error img.error{
+  display: block;
+  margin: 10vh auto!important;
+  height: 30vh;
+  max-height: 120px;
+  width: auto;
+  position: relative!important;
+  left: 0px!important;
+  top: 0px!important;
+}
+
+.contenedor.reforzamiento.pregunta img.medal {
+  margin: 0px auto;
+  width:100%;
+  max-width: 600px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  margin: 0px auto;
+  display: block;
+}
+
+.podium .retro-respuesta {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 5;
+}
+div.medalla{
+  position: relative;
+  width: 100%;
+}
+.podium .retro-respuesta {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 5;
+
+  background-color: #6D61AB;
+}
+
+span.medal{
+  position: absolute;
+  bottom: 20%;
+  margin:0px;
+  padding: 0px;
+  left: 50%;
+  transform: translate(-50% ,0px);
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;;
+
+}
