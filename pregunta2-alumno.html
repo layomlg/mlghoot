@@ -27,7 +27,7 @@
         <div class="titulo-juego"><p><img class="logo-head" src="./assets/img/logo2.svg"> Pregunta 1 de 10</p></div>
         <div class="progress" data-progress="10"><div></div></div>
       </div>
-      <div class="retro-respuesta succes">
+      <div class="retro-respuesta succes" style="display: none;" onclick="location.href='podium-alumno.html'">
         <p class="estado">Correcto</p>
         <div>
           <img class="succes" src="./assets/img/actividades/succes-b.svg" alt="">
@@ -88,6 +88,13 @@
       }
       setInterval(alturas(),1000);
 
+      
+      /*Eliminar script*/
+      $(".respuestas > button").click(function(){
+        $(".retro-respuesta").toggle();
+      });
+
+      
     </script>
 
   </body>

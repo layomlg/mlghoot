@@ -84,14 +84,14 @@
       <div class="elemento img clearfix">
         <div class="imagen-pregunta">
           <div class="finish"><p><span class="respuesta">5</span></p></div>
-          <div class="imagen" style="display:none;"></div>
-          <div class="graficas-respuesta">
+          <div class="imagen" ></div>
+          <div class="graficas-respuesta" style="display:none;">
             <div data-respuestas="1"><span class="error">0</span><div></div></div>
             <div data-respuestas="1"><span class="error">0</span><div></div></div>
             <div data-respuestas="2"><span class="correct">0</span><div></div></div>
             <div data-respuestas="1"><span class="error">0</span><div></div></div>
           </div>
-          <button class="iniciar">Saltar</button>
+          <button class="iniciar" onclick="location.href='podium.html'">Saltar</button>
           <a class="finalizar">Finalizar juego</a>
         </div>
       </div>
@@ -131,6 +131,12 @@
         });
       }
       setInterval(alturas(),1000);
+
+      /*Eliminar script*/
+      $(".respuestas > button").click(function(){
+        $(".elemento.img .imagen-pregunta > div.imagen").toggle();
+        $(".elemento.img .imagen-pregunta > div.graficas-respuesta").toggle();
+      });
 
     </script>
 
