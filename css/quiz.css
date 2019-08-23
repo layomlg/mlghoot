@@ -919,7 +919,8 @@ span.medal{
   text-align: left;
   cursor: pointer;
 }
-.crear input{
+.crear input,
+.crear textarea{
   display: block;
   margin: 0px auto 40px;
   padding: 8px 15px;
@@ -927,10 +928,22 @@ span.medal{
   background-color: #D6D6D6;
   color: #000000;
   min-height: 37px;
+  border-radius: 0px;
+}
+.crear textarea{
+  width: 100%;
+  height: 37px;
 }
 
 
 .new-actividad > .row:nth-child(odd){
   background-color: #E5E5E5;
   background-color: #fff;
+}
+
+.descripcion{
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  display: block;
 }
