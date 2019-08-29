@@ -801,7 +801,8 @@ div.elemento.img.podium {
 
 /***************************************/
 
-.retro-respuesta.succes{
+
+.retro-respuesta{
   width: 100%;
   height:calc(100% - 80px);
   position: absolute;
@@ -946,4 +947,62 @@ span.medal{
   max-width: 600px;
   margin: 30px auto;
   display: block;
+}
+
+
+/***********************************************/
+
+
+
+.cronometro{
+  font-size: 25px;
+  font-weight: bold;
+  color: #25B376;
+}
+.cronometro.timeout{
+  color: #B32B14;
+}
+
+@media screen and (max-width: 971px) {
+  .imagen-pregunta .iniciar {
+    top: 0%;
+  }
+  .finish p {
+    top: 0%;
+  }
+  .imagen-pregunta .iniciar.resultados{
+    position: relative;
+    right: auto;
+    top: -30px;
+  }
+  .imagen-pregunta .finalizar {
+    top: calc(100% + 20px);
+  }
+}
+
+
+.r-a{
+  background-color:#FDA88F;
+}
+.r-b{
+  background-color:#FB8A69;
+}
+.r-c{
+  background-color:#FB8A69;
+}
+.r-d{
+  background-color:#FDA88F;
+}
+
+.graficas-respuesta > div:nth-child(1) >div{
+  background-color: #FDA88F;
+}
+.graficas-respuesta > div:nth-child(2) >div{
+  background-color: #FB8A69;
+}
+.graficas-respuesta > div:nth-child(3) >div{
+  background-color: #FB8A69;
+}
+.graficas-respuesta > div:nth-child(4) >div{
+  background-color: #FDA88F;
 }
