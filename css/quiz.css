@@ -379,9 +379,9 @@ div.elemento.resp{
   position: absolute;
   right: 30px;
   top: 100%;
-  -webkit-transform: translate(0px,-50%);
-  -ms-transform: translate(0px,-50%);
-  transform: translate(0px,-50%);
+  -webkit-transform: translate(0px,-100%);
+  -ms-transform: translate(0px,-100%);
+  transform: translate(0px,-100%);
   border: 0px none;
   font-size: 14px;
   padding: 5px;
@@ -415,6 +415,7 @@ div.elemento.resp{
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  height: calc(90% - 60px);
 }
 
 
@@ -463,9 +464,10 @@ div.elemento.resp{
 }
 .elemento.img .imagen-pregunta > div.graficas-respuesta {
   position: absolute;
-  height: 90%;
+  height: calc(90% - 60px);
   width: 50%;
   margin: 0px 25%;
+  max-height: unset;
 }
 .graficas-respuesta > div{
   width: 25%;
@@ -1005,4 +1007,167 @@ span.medal{
 }
 .graficas-respuesta > div:nth-child(4) >div{
   background-color: #FDA88F;
+}
+
+
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+
+
+.codigo-title{/* Agregar clase al elemento */
+  min-height: 140px;
+  background-image: url(../assets/img/bg-reforzamiento.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.contenedor.reforzamiento.pregunta .esperando img {
+  position: relative;
+  display: block;
+  left: 0px;
+  top: 0px;
+}
+
+.body {
+  background-image: none;
+}
+.respuestas > button{
+  overflow: auto;
+}
+
+div.elemento.img {
+  position: absolute;
+  height: calc(66% - 192px);
+  height: calc(66% - 140px);
+  top: 100px;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+}
+
+.noclick *{
+  pointer-events: none;
+  cursor: default;
+}
+
+.alumno .elemento.img .imagen-pregunta >div.finish2 {/*Agregar la clase alumno al body de pregunta 2 alumno.html*/
+  padding: 0px;
+  display: none;
+}
+div.elemento.img {
+  position: absolute;
+  height: calc(66% - 100px);
+  top: 100px;
+
+}
+.pregunta .esperando {
+  overflow: auto;
+  /*max-height: 100px;*/
+}
+.esperando.mh {/*Agregar la clase mh al elemento en pregunta.aspx*/
+  overflow: auto;
+  max-height: 100px;
+}
+.elemento.img .imagen-pregunta > div.esperando {
+  padding: 0px;
+  max-height: 100px;
+  overflow: auto;
+  padding: 15px;
+}
+.elemento.img .imagen-pregunta >div > span{
+  padding: 0px 15px;
+  display: block;
+}
+
+
+@media screen and (max-width: 400px) {
+  .elemento.img .imagen-pregunta > div.graficas-respuesta {
+    position: absolute;
+    height: 90%;
+    width: 70%;
+    margin: 0px 15%;
+    bottom: 0px;
+  }
+}
+
+/*.graficas-respuesta > div::after{*/
+.preg-inc{
+  color: red;
+  position: absolute;
+  bottom: 0px!important
+    ;
+}
+.elemento.img .imagen-pregunta{
+  height: 100%;
+}
+
+@media screen and (max-width: 971px){
+  .finish p {
+    top: -67px;
+  }
+  .imagen-pregunta .iniciar {
+    top: -30px;
+  }
+  .cronometro {
+    position: absolute;
+    top: -85px;
+    right: 5px;
+  }
+
+}
+
+
+.respuestas-actividad{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  padding: 30px;
+}
+
+.respuestas-actividad > div{
+  margin-bottom: 30px;
+}
+.retroalimentacion-pregunta{
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff8c6a;
+}
+
+.retroalimentacion-respuesta{
+  color: #000000;
+}
+.incorrecta{
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-image: url(../assets/img/actividades/error.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.correcta{
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-image: url(../assets/img/actividades/succes3.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+/**************************/
+.imagen{
+  background-image: none;
+}
+.imagen > img{
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
 }

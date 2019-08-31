@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/quiz.css">
   </head>
 
-  <body class="body page-index actividad clearfix">
+  <body class="body page-index actividad clearfix noclick">
 
 
     <nav class="navbar navbar-expand navbar-dark fixed-top primera">
@@ -85,10 +85,10 @@
         <div class="imagen-pregunta">
           <span class="cronometro">99:99:99</span>
           <div class="finish"><p><span class="respuesta">5</span></p></div>
-          <div class="imagen" ></div>
+          <div class="imagen" ><img src="assets/img/actividades/pilar/pilar1.png"></div>
           <div class="graficas-respuesta" style="display:none;">
             <div data-respuestas="1"><span class="error">0</span><div></div></div>
-            <div data-respuestas="1"><span class="error">0</span><div></div></div>
+            <div data-respuestas="0"><span class="error">0</span><div></div></div>
             <div data-respuestas="2"><span class="correct">0</span><div></div></div>
             <div data-respuestas="1"><span class="error">0</span><div></div></div>
           </div>
@@ -99,10 +99,10 @@
       </div>
       <div class="elemento w-100 resp clearfix">
         <div class="respuestas x4">
-          <button class="r-a">A) 10</button>
-          <button class="r-b">B) 20</button>
-          <button class="r-c">C) 30</button>
-          <button class="r-d">D) 40</button>
+          <button class="r-a" >AM: Revisión de prioridades, Calistenia/impactos, Coordinación reparto, Coaching, Salida al mercado. PM: LDV Recepción de rutas, Rendición de cuentas</button>
+          <button class="r-b" >AM: Recepción de rutas, Calistenia/impactos, Coordinación reparto, Coaching, Salida al mercado. PM:  Revisión de prioridades LDV, Rendición de cuentas</button>
+          <button class="r-c" >C) AM: Recepción de rutas, Calistenia/impactos, Coordinación reparto, Coaching, Salida al mercado. </button>
+          <button class="r-d" >D) PM:  Revisión de prioridades LDV, Rendición de cuentas</button>
         </div>
 
       </div>
@@ -139,6 +139,65 @@
         $(".elemento.img .imagen-pregunta > div.imagen").toggle();
         $(".elemento.img .imagen-pregunta > div.graficas-respuesta").toggle();
       });
+
+
+
+
+      $(".respuestas > button").each(function(){
+        var iScrollHeight = $(this).prop("scrollHeight");
+        var a = parseInt(iScrollHeight - 2);
+        var b = parseInt($(this).height() + 30);
+        /*console.log(a);
+        console.log(b);
+        console.log(a>=b);*/
+        while(a >= b){
+          var fontSize = parseInt($(this).css("font-size"));
+          fontSize = fontSize - 1 + "px";
+          $(this).css("font-size",fontSize);
+          var iScrollHeight = $(this).prop("scrollHeight");
+          var a = parseInt(iScrollHeight - 2);
+          var b = parseInt($(this).height() + 30);
+          /*console.log(a);
+          console.log(b);
+          console.log(a>=b);*/
+        }
+      });
+      $(".elemento.img .imagen-pregunta >div").each(function(){
+        var iScrollHeight = $(this).prop("scrollHeight");
+
+
+        var a = parseInt(iScrollHeight - 2);
+        var b = parseInt($(this).height() + 30);
+        while(a >= b){
+          var fontSize = parseInt($(this).css("font-size"));
+          fontSize = fontSize - 1 + "px";
+          $(this).css("font-size",fontSize);
+          var iScrollHeight = $(this).prop("scrollHeight");
+          var a = parseInt(iScrollHeight - 2);
+          var b = parseInt($(this).height() + 30);
+        }
+      });
+
+
+      $(document).ready(function(){
+        setTimeout(function(){$("body").removeClass("noclick");},3000);
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </script>
 
