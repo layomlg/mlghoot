@@ -75,6 +75,24 @@
     </nav>
 
     <a id="buttontop"></a>
+    <div class="audios">
+      <audio controls id="audioTime">
+        <source src="./assets/sounds/tiempo.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <audio controls id="audioCorrect">
+        <source src="./assets/sounds/correct.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <audio controls id="audioIncorrect">
+        <source src="./assets/sounds/incorrect.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+
+    </div>
 
     <!--InicioContenedor-->
     <div class="contenedor reforzamiento actividad">
@@ -91,6 +109,12 @@
             <div data-respuestas="0"><span class="error">0</span><div></div></div>
             <div data-respuestas="2"><span class="correct">0</span><div></div></div>
             <div data-respuestas="1"><span class="error">0</span><div></div></div>
+            <div class="respuestitas">
+              <p>A)</p>
+              <p>B)</p>
+              <p>C)</p>
+              <p>D)</p>
+            </div>
           </div>
           <button class="iniciar" onclick="location.href='podium.html'">Saltar</button>
           <a class="finalizar">Finalizar juego</a>
@@ -100,9 +124,9 @@
       <div class="elemento w-100 resp clearfix">
         <div class="respuestas x4">
           <button class="r-a" >AM: Revisión de prioridades, Calistenia/impactos, Coordinación reparto, Coaching, Salida al mercado. PM: LDV Recepción de rutas, Rendición de cuentas</button>
-          <button class="r-b" >AM: Recepción de rutas, Calistenia/impactos, Coordinación reparto, Coaching, Salida al mercado. PM:  Revisión de prioridades LDV, Rendición de cuentas</button>
-          <button class="r-c" >C) AM: Recepción de rutas, Calistenia/impactos, Coordinación reparto, Coaching, Salida al mercado. </button>
-          <button class="r-d" >D) PM:  Revisión de prioridades LDV, Rendición de cuentas</button>
+          <button class="r-b play" >AM: Recepción de rutas, Calistenia/impactos, Coordinación reparto, Coaching, Salida al mercado. PM:  Revisión de prioridades LDV, Rendición de cuentas</button>
+          <button class="r-c incorrect" >C) AM: Recepción de rutas, Calistenia/impactos, Coordinación reparto, Coaching, Salida al mercado. </button>
+          <button class="r-d correct" >D) PM:  Revisión de prioridades LDV, Rendición de cuentas</button>
         </div>
 
       </div>
@@ -162,7 +186,8 @@
           console.log(a>=b);*/
         }
       });
-      $(".elemento.img .imagen-pregunta >div").each(function(){
+      //$(".elemento.img .imagen-pregunta >div").each(function(){
+      $(".esperando.mh").each(function(){
         var iScrollHeight = $(this).prop("scrollHeight");
 
 
@@ -183,23 +208,39 @@
         setTimeout(function(){$("body").removeClass("noclick");},3000);
       });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
+    <script>
+      /*
+      function togglePlay(aud) {
+        console.log(aud);
+        var myAudio = document.getElementById(aud);
+        if (myAudio.paused) {
+          myAudio.currentTime = 0;
+          myAudio.play();
+        } else {
+          myAudio.pause();
+        }
+      };*/
+
+      $(".incorrect").on("click", function(){
+        var myAudio = document.getElementById("audioIncorrect");
+        myAudio.currentTime = 0;
+        myAudio.play();             
+      });
+      $(".correct").on("click", function(){
+        var myAudio = document.getElementById("audioCorrect");
+        myAudio.currentTime = 0;
+        myAudio.play();              
+      });
+      $(".play").on("click", function(){
+        var myAudio = document.getElementById("audioTime");
+        myAudio.currentTime = 0;
+        myAudio.play();             
+      });
+
+
+
+    </script>	
 
   </body>
 
